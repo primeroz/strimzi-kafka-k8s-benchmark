@@ -63,7 +63,7 @@ local l = import 'lib.libsonnet';
     },
     '10mb': {  // 10 MB/s
       local job = self,
-      parallelism: 1,
+      parallelism: 2,
       recordspersec: 1,
       size: (10 * 0.99 * 1024 * 1024),  // max message is set to 10485760 on the topic
       maxrequestsize: (10 * 1024 * 1024),
