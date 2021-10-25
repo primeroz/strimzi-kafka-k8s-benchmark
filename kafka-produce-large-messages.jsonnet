@@ -48,7 +48,7 @@ local l = import 'lib.libsonnet';
       parallelism: 1,
       recordspersec: 1,
       size: (1 * 1024 * 1024),
-      maxrequestsize: 1 * job.size,
+      maxrequestsize: 2 * job.size,
       compress: true,
       batchsize: 2 * job.size,
     },
