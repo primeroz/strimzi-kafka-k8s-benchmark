@@ -2,7 +2,7 @@ local l = import 'lib.libsonnet';
 
 {
   jobs:: {
-    '10mb-1kb': {
+    '1kb': {
       local job = self,
       parallelism: 5,
       recordspersec: 22500,
@@ -10,25 +10,25 @@ local l = import 'lib.libsonnet';
       maxrequestsize: 1048576,
       compress: true,
     },
-    '15mb-128kb': {
+    '128kb': {
       local job = self,
       parallelism: 3,
-      recordspersec: 40,
+      recordspersec: 50,
       size: (0.128 * 1024 * 1024),
       maxrequestsize: 1048576,
       compress: true,
     },
-    '20mb-512kb': {
+    '512kb': {
       local job = self,
       parallelism: 4,
-      recordspersec: 10,
+      recordspersec: 12,
       size: (0.5 * 1024 * 1024),
       maxrequestsize: 5 * job.size,
       compress: true,
       batchsize: 5 * job.size,
       lingerms: 5,
     },
-    '20mb-1mb': {
+    '1mb': {
       local job = self,
       parallelism: 2,
       recordspersec: 10,
